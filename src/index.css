@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Style the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #3b3a3a; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Roundness of the scrollbar thumb */
+}
+
+/* Style the scrollbar track (the area the thumb moves within) */
+::-webkit-scrollbar-track {
+  background: #524f4f; /* Color of the scrollbar track */
+  border-radius: 6px; /* Roundness of the scrollbar track */
+}
+
+/* Optional: Style the scrollbar buttons (not used in most cases) */
+::-webkit-scrollbar-button {
+  background: #3d3939; /* Color of the scrollbar buttons */
+}
