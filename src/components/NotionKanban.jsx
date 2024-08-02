@@ -15,9 +15,18 @@ const Board = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem("tasks") ||[]);
-    
-      setTasks(storedTasks);
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      try {
+        const tasks = JSON.parse(storedTasks);
+        setTasks(tasks);
+      } catch (error) {
+        console.error("Failed to parse JSON:", error);
+        setTasks([]);
+      }
+    } else {
+      setTasks([]);
+    }
     
   }, []);
 
